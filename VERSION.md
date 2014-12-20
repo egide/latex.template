@@ -3,13 +3,13 @@ Version
 
 Branche
 -------
-feature/nitilaisation
-Fin de la branche.
+Branche de développement.
 
 
 Objectif
 --------
-Fusion dans la branche de développement.
+C'est ici que ce fait le gros du travail.
 
-Mise en place du dépôt et création de la structure.
+Cette de branche est l'origine de toute les branches de développement et des
+branches pour la création des futures versions stables.
 
