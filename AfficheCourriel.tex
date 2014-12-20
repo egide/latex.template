@@ -1,0 +1,21 @@
+\documentclass[16pt,parskip=half]{scrartcl}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{xspace}\usepackage{lmodern}\usepackage{array}
+\usepackage[top=2cm, bottom=1cm, left=3cm, right=3cm,]{geometry}\pagestyle{empty}
+\usepackage[frenchb]{babel}
+\begin{document}
+\noindent\begin{tabular}{>{\bfseries}r!{:}l}
+	From	& id@domain.tld\\
+	To		& id@domain.tld\\
+	Date	& \today \\
+	Objet	& Sujet du courriel
+\end{tabular}
+\par\vspace{1em}\noindent\hrulefill\vspace{2em}
+
+Texte
+
+\bigskip\hfill\emph{Signature}
+
+\vfill{\tiny\itshape
+	Texte d'explication
+\par\hfill signature/\today}
+\end{document}
