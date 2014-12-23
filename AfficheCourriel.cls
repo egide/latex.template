@@ -5,4 +5,6 @@
 %
 % chargement de la classe article de komascript
 \LoadClass[pdflatex,parskip=half]{scrartcl}%
-
+%
+% encodage des documents en entrée
+\usepackage[utf8]{inputenc}%
