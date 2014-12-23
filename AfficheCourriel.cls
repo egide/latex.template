@@ -43,6 +43,7 @@
 			{}%
 			{%
 				\setlength{\labelwidth}{30mm}%
+				\setlength{\leftmargin}{35mm}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
