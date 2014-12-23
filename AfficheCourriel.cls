@@ -51,7 +51,7 @@
 			}%
 	}{%
 		\end{list}%
-		\par\vspace{.2ex}\noindent\hrulefill\par\vspace{1ex}%
+		\noindent\rule{\linewidth}{.5pt}%
 	}
 % Fin de document
 
