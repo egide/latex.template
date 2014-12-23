@@ -42,9 +42,9 @@
 		\begin{list}%
 			{}%
 			{%
-				\setlength{\labelwidth}{20mm}%
-				\setlength{\leftmargin}{23mm}%
-				\setlength{\rightmargin}{10mm}%
+				\setlength{\labelwidth}{5em}%
+				\setlength{\leftmargin}{5.1em}%
+				\setlength{\rightmargin}{1em}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
