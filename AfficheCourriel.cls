@@ -48,6 +48,7 @@
 			}%
 	}{%
 		\end{list}%
+		\vspace{.5ex}\noindent\hrulefill\vspace{2ex}%
 	}
 % Fin de document
 
