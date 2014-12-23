@@ -1,5 +1,8 @@
-% Impression de courriel
+%[[1 Impression de courriel
 % vim: set nospell fdm=marker foldmarker=[[,]] filetype=tex :
+% Classe pour l'impression de courriel pour l'affichage
+% sur tableau public
+%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
