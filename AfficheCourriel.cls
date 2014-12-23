@@ -34,5 +34,19 @@
 %
 \usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}%
 %
+%[[1 Liste pour l'entete
+\newcommand{\entrylabel}[1]{\mbox{\textsf{#1 :}}\hfil}
+\newenvironment{mylist}%
+	{%
+		\noindent%
+		\begin{list}%
+			{}%
+			{%
+				\setlength{\labelwidth}{30mm}%
+				\renewcommand{\makelabel}{\entrylabel}%
+			}%
+	}{%
+		\end{list}%
+	}
 % Fin de document
 
