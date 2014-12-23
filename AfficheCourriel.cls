@@ -3,6 +3,7 @@
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau public
 %
+%[[1 définitions de base
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
@@ -14,6 +15,11 @@
 %
 % encodage des caractères en sortie
 \usepackage[T1]{fontenc}%
+%
+%[[1 extentions
+%
+% Gestion des espaces suivants les macros
+\usepackage{xspace}%
 %
 % Le document est en français
 \usepackage[frenchb]{babel}%
