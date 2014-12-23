@@ -8,50 +8,49 @@
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
 % Chargement de la classe article de komascript
-\LoadClass[pdflatex,parskip=half]{scrartcl}%
+\LoadClass[parskip=half]{scrartcl}%
 %
 % Encodage des documents en entrée
-\usepackage[utf8]{inputenc}%
+\RequirePackage[utf8]{inputenc}%
 %
 % Encodage des caractères en sortie
-\usepackage[T1]{fontenc}%
+\RequirePackage[T1]{fontenc}%
 %
 % Police postscript pour une sortie correcte en pdf
-\usepackage{lmodern}%
+\RequirePackage{lmodern}%
 %
 %[[1 Extentions
 %
 % Gestion des espaces suivants les macros
-\usepackage{xspace}%
+\RequirePackage{xspace}%
 %
 % Le document est en français
-\usepackage[frenchb]{babel}%
+\RequirePackage[frenchb]{babel}%
 %
 % Tableaux complexe
-\usepackage{array}%
+\RequirePackage{array}%
 %
 %[[1 Mise en page
 %
-\usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}%
+\RequirePackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm, pdftex,]{geometry}%
 %
 %[[1 Liste pour l'entete
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
 \newenvironment{mylist}%
 	{%
 		\noindent%
-		\begin{list}%
-			{}%
+		\begin{list}{}%
 			{%
-				\setlength{\labelwidth}{5em}%
-				\setlength{\leftmargin}{5.1em}%
-				\setlength{\rightmargin}{1em}%
+				\setlength{\labelwidth}{6em}%
+				\setlength{\leftmargin}{6.1em}%
+				%\setlength{\rightmargin}{1em}%
 				\setlength{\itemsep}{0em}%
 				\setlength{\itemindent}{0em}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
 		\end{list}%
-		\noindent\rule{\linewidth}{.5pt}%
+		\par\noindent\hfill\rule{.8\linewidth}{.5pt}%
 	}
 % Fin de document
 
