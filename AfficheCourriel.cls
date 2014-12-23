@@ -35,15 +35,15 @@
 \usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}%
 %
 %[[1 Liste pour l'entete
-\newcommand{\entrylabel}[1]{\textsf{\hfill #1 :}}
+\newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
 \newenvironment{mylist}%
 	{%
 		\noindent%
 		\begin{list}%
 			{}%
 			{%
-				\setlength{\labelwidth}{30mm}%
-				\setlength{\leftmargin}{35mm}%
+				\setlength{\labelwidth}{20mm}%
+				\setlength{\leftmargin}{23mm}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
