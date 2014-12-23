@@ -16,6 +16,9 @@
 % encodage des caractères en sortie
 \usepackage[T1]{fontenc}%
 %
+% Police postscript pour une sortie correcte en pdf
+\usepackage{lmodern}%
+%
 %[[1 extentions
 %
 % Gestion des espaces suivants les macros
