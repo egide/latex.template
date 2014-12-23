@@ -30,4 +30,9 @@
 % Tableaux complexe
 \usepackage{array}%
 %
+%[[1 Mise en page
+%
+\usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}%
+%
 % Fin de document
+
