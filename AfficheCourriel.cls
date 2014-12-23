@@ -26,3 +26,6 @@
 %
 % Le document est en français
 \usepackage[frenchb]{babel}%
+%
+% Tableaux complexe
+\usepackage{array}%
