@@ -11,3 +11,6 @@
 %
 % encodage des caractères en sortie
 \usepackage[T1]{fontenc}%
+%
+% Le document est en français
+\usepackage[frenchb]{babel}%
