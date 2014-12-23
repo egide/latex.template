@@ -44,6 +44,7 @@
 			{%
 				\setlength{\labelwidth}{20mm}%
 				\setlength{\leftmargin}{23mm}%
+				\setlength{\rightmargin}{10mm}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
