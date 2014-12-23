@@ -8,3 +8,6 @@
 %
 % encodage des documents en entrée
 \usepackage[utf8]{inputenc}%
+%
+% encodage des caractères en sortie
+\usepackage[T1]{fontenc}%
