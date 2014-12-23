@@ -45,11 +45,13 @@
 				\setlength{\labelwidth}{5em}%
 				\setlength{\leftmargin}{5.1em}%
 				\setlength{\rightmargin}{1em}%
+				\setlength{\itemsep}{0em}%
+				\setlength{\itemindent}{0em}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 	}{%
 		\end{list}%
-		\vspace{.5ex}\noindent\hrulefill\vspace{2ex}%
+		\par\vspace{.2ex}\noindent\hrulefill\par\vspace{1ex}%
 	}
 % Fin de document
 
