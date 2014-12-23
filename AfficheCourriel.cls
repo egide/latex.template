@@ -35,7 +35,7 @@
 \usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}%
 %
 %[[1 Liste pour l'entete
-\newcommand{\entrylabel}[1]{\mbox{\textsf{#1 :}}\hfil}
+\newcommand{\entrylabel}[1]{\textsf{\hfill #1 :}}
 \newenvironment{mylist}%
 	{%
 		\noindent%
