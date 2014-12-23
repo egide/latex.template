@@ -3,23 +3,23 @@
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau public
 %
-%[[1 définitions de base
+%[[1 Définitions de base
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
-% chargement de la classe article de komascript
+% Chargement de la classe article de komascript
 \LoadClass[pdflatex,parskip=half]{scrartcl}%
 %
-% encodage des documents en entrée
+% Encodage des documents en entrée
 \usepackage[utf8]{inputenc}%
 %
-% encodage des caractères en sortie
+% Encodage des caractères en sortie
 \usepackage[T1]{fontenc}%
 %
 % Police postscript pour une sortie correcte en pdf
 \usepackage{lmodern}%
 %
-%[[1 extentions
+%[[1 Extentions
 %
 % Gestion des espaces suivants les macros
 \usepackage{xspace}%
@@ -29,3 +29,5 @@
 %
 % Tableaux complexe
 \usepackage{array}%
+%
+% Fin de document
