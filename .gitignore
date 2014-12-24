@@ -1,5 +1,6 @@
 ## Dossier de compilation
 out/
+*.pdf
 
 ## fichiers temporaires
 *.swp
