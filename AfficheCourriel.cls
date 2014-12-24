@@ -32,8 +32,14 @@
 %
 %[[1 Mise en page
 %
-% Marges
-\RequirePackage[top=3cm, bottom=3cm, left=1.8cm, right=1cm, pdftex,]{geometry}%
+%[[2 Marges
+\RequirePackage[%
+	top=3cm,%
+	bottom=3cm,%
+	left=1.8cm,%
+	right=1cm,%
+	pdftex,%
+]{geometry}%
 %
 %[[2 Entêtes et pieds de pages
 \RequirePackage{scrpage2}%
