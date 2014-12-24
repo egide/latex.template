@@ -50,7 +50,7 @@
 			}%
 	}{%
 		\end{list}%
-		\noindent\rule{\textwidth}{.15ex}%
+		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
 	}
 % Fin de document
 
