@@ -33,10 +33,34 @@
 %[[1 Mise en page
 %
 % Marges
-\RequirePackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm, pdftex,]{geometry}%
+\RequirePackage[top=3cm, bottom=3cm, left=1.8cm, right=1cm, pdftex,]{geometry}%
 %
-% Entêtes et pieds de pages
+%[[2 Entêtes et pieds de pages
 \RequirePackage{scrpage2}%
+%
+% connaître le numéro de la dernière page
+\RequirePackage{lastpage}%
+%
+% vide le contenu des entêtes et pieds de pages
+\clearscrheadfoot%
+%
+% Définition des polices d'entête et de pied de page
+%pied de page
+\setkomafont{pagefoot}{\normalfont\sffamily\small}%
+%numéro de page
+\setkomafont{pagenumber}{\normalfont\rmfamily\slshape\normalsize}%
+%
+%[[2 Définition du pied de page
+% ligne de séparation
+\setfootsepline{.5pt}%
+%
+\ifoot[]{Du texte}%
+\cfoot[\thepage\,/\,\pageref{LastPage}]{}%
+\ofoot[]{\thepage\,/\,\pageref{LastPage}}%
+%
+% Style de page à utiliser
+\thispagestyle{plain}%
+\pagestyle{scrheadings}%
 %
 %[[1 Liste pour l'entete
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
