@@ -43,7 +43,7 @@
 			{%
 				\setlength{\labelwidth}{6em}%
 				\setlength{\leftmargin}{6.1em}%
-				%\setlength{\rightmargin}{1em}%
+				\setlength{\rightmargin}{1em}%
 				\setlength{\itemsep}{0em}%
 				\setlength{\itemindent}{0em}%
 				\renewcommand{\makelabel}{\entrylabel}%
