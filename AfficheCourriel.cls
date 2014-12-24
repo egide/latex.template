@@ -8,7 +8,7 @@
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
 % Chargement de la classe article de komascript
-\LoadClass[parskip=half]{scrartcl}%
+\LoadClass{scrartcl}%
 %
 % Encodage des documents en entrée
 \RequirePackage[utf8]{inputenc}%
@@ -50,7 +50,7 @@
 			}%
 	}{%
 		\end{list}%
-		\par\noindent\hfill\rule{.8\linewidth}{.5pt}%
+		\noindent\rule{\textwidth}{.5pt}%
 	}
 % Fin de document
 
