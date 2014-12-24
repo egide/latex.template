@@ -50,7 +50,7 @@
 			}%
 	}{%
 		\end{list}%
-		\noindent\rule{\textwidth}{.5pt}%
+		\noindent\rule{\textwidth}{.15ex}%
 	}
 % Fin de document
 
