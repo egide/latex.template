@@ -32,7 +32,11 @@
 %
 %[[1 Mise en page
 %
+% Marges
 \RequirePackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm, pdftex,]{geometry}%
+%
+% Entêtes et pieds de pages
+\RequirePackage{scrpage2}%
 %
 %[[1 Liste pour l'entete
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
