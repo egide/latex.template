@@ -42,6 +42,8 @@
 ]{geometry}%
 %
 %[[2 Entêtes et pieds de pages
+%
+%[[3 Commun
 \RequirePackage{scrpage2}%
 %
 % connaître le numéro de la dernière page
@@ -50,23 +52,24 @@
 % vide le contenu des entêtes et pieds de pages
 \clearscrheadfoot%
 %
-% Définition des polices d'entête et de pied de page
-%pied de page
-\setkomafont{pagefoot}{\normalfont\sffamily\small}%
-%numéro de page
-\setkomafont{pagenumber}{\normalfont\rmfamily\slshape\normalsize}%
-%
-%[[2 Définition du pied de page
-% ligne de séparation
-\setfootsepline{.5pt}%
-%
-\ifoot[]{Du texte}%
-\cfoot[\thepage\,/\,\pageref{LastPage}]{}%
-\ofoot[]{\thepage\,/\,\pageref{LastPage}}%
-%
 % Style de page à utiliser
 \thispagestyle{plain}%
 \pagestyle{scrheadings}%
+%
+%[[3 pied de page
+% Police
+\setkomafont{pagefoot}{\normalfont\sffamily\small}%
+%
+%numéro de page
+\setkomafont{pagenumber}{\normalfont\rmfamily\slshape\normalsize}%
+%
+% ligne de séparation
+\setfootsepline{.5pt}%
+%
+% Contenu i: intérieur ; c: centre ; o: extérieur
+\ifoot[]{Du texte}%
+\cfoot[\thepage\,/\,\pageref{LastPage}]{}%
+\ofoot[]{\thepage\,/\,\pageref{LastPage}}%
 %
 %[[1 Liste pour l'entete
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
