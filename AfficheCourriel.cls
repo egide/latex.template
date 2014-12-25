@@ -26,6 +26,10 @@
 \newcommand\ldate{\today}%
 \newcommand\defldate[1]{\renewcommand\ldate{#1}}%
 %
+%[[2 Définition de l'expéditeur
+\newcommand\lfrom{inconnu@domain.tld}%
+\newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}%
+%
 %[[1 Extentions
 %
 % Gestion des espaces suivants les macros
@@ -75,7 +79,7 @@
 \setfootsepline{.5pt}%
 %
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{Du texte}%
+\ifoot[]{\lfrom}%
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\ldate}%
 \ofoot[]{\thepage\,/\,\pageref{LastPage}}%
 %
@@ -94,6 +98,7 @@
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
 		\item[Date] \ldate%
+		\item[From] \lfrom%
 	}{%
 		\end{list}%
 		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
