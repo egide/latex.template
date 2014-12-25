@@ -30,6 +30,23 @@
 \newcommand\lfrom{inconnu@domain.tld}%
 \newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}%
 %
+%[[2 Marges
+%
+\newcommand\ltop{1cm}%
+\newcommand\defltop[1]{\renewcommand\ltop{#1}}%
+%
+\newcommand\lbottom{2cm}%
+\newcommand\deflbottom[1]{\renewcommand\lbottom{#1}}%
+%
+\newcommand\lleft{1.8cm}%
+\newcommand\deflleft[1]{\renewcommand\lleft{#1}}%
+%
+\newcommand\lright{1cm}%
+\newcommand\deflright[1]{\renewcommand\lright{#1}}%
+%
+\newcommand\lfootskip{1cm}%
+\newcommand\deflfootskip[1]{\renewcommand\lfootskip{#1}}%
+%
 %[[1 Extentions
 %
 % Gestion des espaces suivants les macros
@@ -45,11 +62,11 @@
 %
 %[[2 Marges
 \RequirePackage[%
-	top=1cm,%
-	bottom=2cm,%
-	left=1.8cm,%
-	right=1cm,%
-	footskip=1cm,%
+	top=\ltop,%
+	bottom=\lbottom,%
+	left=\lleft,%
+	right=\lright,%
+	footskip=\lfootskip,%
 	pdftex,%
 ]{geometry}%
 %
