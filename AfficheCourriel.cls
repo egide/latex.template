@@ -8,7 +8,7 @@
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 %
 % Chargement de la classe article de komascript
-\LoadClass{scrartcl}%
+\LoadClassWithOptions{scrartcl}%
 %
 % Encodage des documents en entrée
 \RequirePackage[utf8]{inputenc}%
