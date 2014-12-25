@@ -19,6 +19,13 @@
 % Police postscript pour une sortie correcte en pdf
 \RequirePackage{lmodern}%
 %
+%[[1 Constantes
+%
+%[[2 Définition de la date
+% si aucune date n'est donnée, c'est le jour de compilation qui compte.
+\newcommand\ldate{\today}%
+\newcommand\defldate[1]{\renewcommand\ldate{#1}}%
+%
 %[[1 Extentions
 %
 % Gestion des espaces suivants les macros
@@ -69,7 +76,7 @@
 %
 % Contenu i: intérieur ; c: centre ; o: extérieur
 \ifoot[]{Du texte}%
-\cfoot[\thepage\,/\,\pageref{LastPage}]{}%
+\cfoot[\thepage\,/\,\pageref{LastPage}]{\ldate}%
 \ofoot[]{\thepage\,/\,\pageref{LastPage}}%
 %
 %[[1 Liste pour l'entete
@@ -86,6 +93,7 @@
 				\setlength{\itemindent}{0em}%
 				\renewcommand{\makelabel}{\entrylabel}%
 			}%
+		\item[Date] \ldate%
 	}{%
 		\end{list}%
 		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
