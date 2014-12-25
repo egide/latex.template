@@ -34,10 +34,11 @@
 %
 %[[2 Marges
 \RequirePackage[%
-	top=3cm,%
-	bottom=3cm,%
+	top=1cm,%
+	bottom=2cm,%
 	left=1.8cm,%
 	right=1cm,%
+	footskip=1cm,%
 	pdftex,%
 ]{geometry}%
 %
