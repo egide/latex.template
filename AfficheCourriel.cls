@@ -49,6 +49,9 @@
 %
 %[[1 Extentions
 %
+% Gestion des options en clé=valeur
+\RequirePackage{keyval}%
+%
 % Gestion des espaces suivants les macros
 \RequirePackage{xspace}%
 %
