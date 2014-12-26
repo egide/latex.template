@@ -55,11 +55,11 @@
 % Gestion des espaces suivants les macros
 \RequirePackage{xspace}%
 %
-% Le document est en français
-\RequirePackage[frenchb]{babel}%
-%
 % Tableaux complexe
 \RequirePackage{array}%
+%
+% Le document est en français
+\RequirePackage[frenchb]{babel}%
 %
 %[[1 Mise en page
 %
