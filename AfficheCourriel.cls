@@ -19,6 +19,20 @@
 % Police postscript pour une sortie correcte en pdf
 \RequirePackage{lmodern}%
 %
+%[[1 Extentions
+%
+% Gestion des options en clé=valeur
+\RequirePackage{keyval}%
+%
+% Gestion des espaces suivants les macros
+\RequirePackage{xspace}%
+%
+% Tableaux complexe
+\RequirePackage{array}%
+%
+% Le document est en français
+\RequirePackage[frenchb]{babel}%
+%
 %[[1 Constantes
 %
 %[[2 Définition de la date
@@ -46,20 +60,6 @@
 %
 \newcommand\lfootskip{1cm}%
 \newcommand\deflfootskip[1]{\renewcommand\lfootskip{#1}}%
-%
-%[[1 Extentions
-%
-% Gestion des options en clé=valeur
-\RequirePackage{keyval}%
-%
-% Gestion des espaces suivants les macros
-\RequirePackage{xspace}%
-%
-% Tableaux complexe
-\RequirePackage{array}%
-%
-% Le document est en français
-\RequirePackage[frenchb]{babel}%
 %
 %[[1 Mise en page
 %
