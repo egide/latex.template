@@ -3,11 +3,13 @@ Version
 
 Branche
 -------
-feature/CourrielClasse
+Branche de développement.
 
 
 Objectif
 --------
-- Me familiariser avec la création de classe LaTeX.
-- Produire une classe, simple, permettant l'impression de courriers électroniques
-	dans le but de les afficher sur des tableaux d'informations.
+C'est ici que ce fait le gros du travail.
+
+Cette de branche est l'origine de toute les branches de développement et des
+branches pour la création des futures versions stables.
+
