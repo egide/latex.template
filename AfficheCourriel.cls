@@ -17,6 +17,7 @@
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
 \RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
+\RequirePackage{geometry}%           Gestion des marges
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[[1 Constantes
@@ -31,14 +32,18 @@
 
 %[[1 Options
 %[[2 Mise en page
-\RequirePackage[%
-	top=1cm,%
-	bottom=2cm,%
-	left=1.8cm,%
-	right=1cm,%
-	footskip=1cm,%
-	pdftex,%
-]{geometry}%
+\DeclareOption{petitemarge}{%
+	   \PassOptionsToPackage{%
+				top=1cm,%
+				bottom=2cm,%
+				left=1.8cm,%
+				right=1cm,%
+				footskip=1cm,%
+				pdftex%
+		}{geometry}%
+}
+
+\ProcessOptions
 
 %[[1 Entêtes et pieds de pages
 % vide le contenu des entêtes et pieds de pages
