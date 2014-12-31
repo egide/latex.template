@@ -6,44 +6,30 @@
 %[[1 Définitions de base
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
-
-% Chargement de la classe article de komascript
-\LoadClassWithOptions{scrartcl}
-
-% Encodage des documents en entrée
-\RequirePackage[utf8]{inputenc}
-
-% Encodage des caractères en sortie
-\RequirePackage[T1]{fontenc}
-
-% Police postscript pour une sortie correcte en pdf
-\RequirePackage{lmodern}
+\LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript
+\RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
+\RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
 
 %[[1 Extentions
-% Gestion des options en clé=valeur
-\RequirePackage{keyval}
-
-% Gestion des espaces suivants les macros
-\RequirePackage{xspace}
-
-% Tableaux complexe
-\RequirePackage{array}
-
-% Le document est en français
-\RequirePackage[frenchb]{babel}
+\RequirePackage{lmodern}%            Police postscript pour une sortie correcte en pdf
+\RequirePackage{keyval}%             Gestion des options en clé=valeur
+\RequirePackage{xspace}%             Gestion des espaces suivants les macros
+\RequirePackage{array}%              Tableaux complexe
+\RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
+\RequirePackage{lastpage}%           connaître le numéro de la dernière page
+\RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[[1 Constantes
-%[[2 Définition de la date
+% Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
 \newcommand\ldate{\today}
 \newcommand\defldate[1]{\renewcommand\ldate{#1}}
 
-%[[2 Définition de l'expéditeur
+% Définition de l'expéditeur
 \newcommand\lfrom{inconnu@domain.tld}
 \newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}
 
 %[[1 Mise en page
-%[[2 Marges
 \RequirePackage[%
 	top=1cm,%
 	bottom=2cm,%
@@ -53,13 +39,7 @@
 	pdftex,%
 ]{geometry}%
 
-%[[2 Entêtes et pieds de pages
-%[[3 Commun
-\RequirePackage{scrpage2}
-
-% connaître le numéro de la dernière page
-\RequirePackage{lastpage}
-
+%[[1 Entêtes et pieds de pages
 % vide le contenu des entêtes et pieds de pages
 \clearscrheadfoot
 
@@ -67,7 +47,6 @@
 \thispagestyle{plain}
 \pagestyle{scrheadings}
 
-%[[3 pied de page
 % Police
 \setkomafont{pagefoot}{\normalfont\sffamily\small}
 
