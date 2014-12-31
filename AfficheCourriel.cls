@@ -1,22 +1,22 @@
-%[[1 Impression de courriel
+%[[1 Définitions de base
 % vim: set nospell fdm=marker foldmarker=[[,]] filetype=tex :
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau d'affichage public
 
-%[[1 Définitions de base
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
-\LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript
+\NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible
+\ProvidesClass{AfficheCourriel}%     Nom et version de la classe fournie
+	[2014/12/23 Classe personnelle, V0.0]
+\LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript en lui passant les options
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
 
 %[[1 Extentions
+\RequirePackage{xspace}%             Gestion des espaces suivants les macros
 \RequirePackage{lmodern}%            Police postscript pour une sortie correcte en pdf
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
-\RequirePackage{xspace}%             Gestion des espaces suivants les macros
 \RequirePackage{array}%              Tableaux complexe
-\RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
+\RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[[1 Constantes
@@ -29,7 +29,8 @@
 \newcommand\lfrom{inconnu@domain.tld}
 \newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}
 
-%[[1 Mise en page
+%[[1 Options
+%[[2 Mise en page
 \RequirePackage[%
 	top=1cm,%
 	bottom=2cm,%
@@ -47,7 +48,7 @@
 \thispagestyle{plain}
 \pagestyle{scrheadings}
 
-% Police
+% Police du pied de page
 \setkomafont{pagefoot}{\normalfont\sffamily\small}
 
 %numéro de page
@@ -62,6 +63,7 @@
 \ofoot[]{\thepage\,/\,\pageref{LastPage}}
 
 %[[1 Commandes personnelles
+%[[2 Liste en tête de document
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
 \newenvironment{mylist}%
 	{%
@@ -81,5 +83,6 @@
 		\end{list}%
 		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
 	}
+
 % Fin de document
 
