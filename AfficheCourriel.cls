@@ -3,9 +3,8 @@
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau d'affichage public
 
-\NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible
-\ProvidesClass{AfficheCourriel}%     Nom et version de la classe fournie
-	[2014/12/23 Classe personnelle, V0.0]
+\NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible Nom et version de la classe fournie
+\ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
 \LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript en lui passant les options
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
@@ -17,7 +16,15 @@
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
 \RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
-\RequirePackage{geometry}%           Gestion des marges
+\RequirePackage[%                    Gestion des marges
+		top=2cm,%
+		bottom=2cm,%
+		left=2cm,%
+		right=2cm,%
+		footskip=1cm,%
+		pdftex%
+	]
+	{geometry}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[[1 Constantes
@@ -32,16 +39,28 @@
 
 %[[1 Options
 %[[2 Mise en page
-\DeclareOption{petitemarge}{%
-	   \PassOptionsToPackage{%
-				top=1cm,%
-				bottom=2cm,%
-				left=1.8cm,%
-				right=1cm,%
-				footskip=1cm,%
-				pdftex%
-		}{geometry}%
+\DeclareOption{margepetite}{%[[3
+	\geometry{%
+		top=1cm,%
+		bottom=2cm,%
+		left=1.8cm,%
+		right=1cm,%
+		footskip=1cm,%
+		pdftex%
+	}
 }
+
+\DeclareOption{margegrande}{%[[3
+	\geometry{%
+		top=3cm,%
+		bottom=3cm,%
+		left=3cm,%
+		right=3cm,%
+		footskip=1cm,%
+		pdftex%
+	}
+}
+
 
 \ProcessOptions
 
