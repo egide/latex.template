@@ -1,21 +1,21 @@
-\documentclass[14pt,parskip=half]{scrartcl}
-\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{xspace}\usepackage{lmodern}\usepackage{array}
-\usepackage[top=1cm, bottom=1cm, left=1.8cm, right=1cm,]{geometry}\pagestyle{empty}
-\usepackage[frenchb]{babel}
+\documentclass[%
+%	margepetite,
+%	margegrande,
+%	16pt,
+]{AfficheCourriel}
+\defldate{\today}
+\deflfrom{identifiant@domaine.tld}
 \begin{document}
-\noindent\begin{tabular}{>{\bfseries}r!{:}l}
-	From	& id@domain.tld\\
-	To		& id@domain.tld\\
-	Date	& \today \\
-	Objet	& Sujet du courriel
-\end{tabular}
-\par\vspace{1em}\noindent\hrulefill\vspace{2em}
+\begin{mylist}
+	\item[To] identifiant@domaine.tld
+	\item[Objet] Sujet du message
+\end{mylist}
 
-Texte
+Texte.
 
-\bigskip\hfill\emph{Signature}
+\signature{Auteur}
 
-\vfill{\tiny\itshape
-	Texte d'explication
-\par\hfill signature/\today}
+\commentaire{
+	Texte explicatif.
+}{Initiale/\today}
 \end{document}
