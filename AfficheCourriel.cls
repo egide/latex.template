@@ -44,9 +44,7 @@
 		top=1cm,%
 		bottom=2cm,%
 		left=1.8cm,%
-		right=1cm,%
-		footskip=1cm,%
-		pdftex%
+		right=1cm%
 	}
 }
 
@@ -55,9 +53,7 @@
 		top=3cm,%
 		bottom=3cm,%
 		left=3cm,%
-		right=3cm,%
-		footskip=1cm,%
-		pdftex%
+		right=3cm%
 	}
 }
 
