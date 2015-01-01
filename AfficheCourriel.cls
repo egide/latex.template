@@ -43,7 +43,7 @@
 	\geometry{%
 		top=1cm,%
 		bottom=2cm,%
-		left=1.8cm,%
+		left=1cm,%
 		right=1cm%
 	}
 }
@@ -79,8 +79,8 @@
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
 \ifoot[]{\lfrom}
-\cfoot[\thepage\,/\,\pageref{LastPage}]{\ldate}
-\ofoot[]{\thepage\,/\,\pageref{LastPage}}
+\cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
+\ofoot[]{\ldate}
 
 %[[1 Commandes personnelles
 %[[2 Liste en tête de document
