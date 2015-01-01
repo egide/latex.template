@@ -104,5 +104,15 @@
 		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
 	}
 
+%[[2 Signature
+% Commande pour placer la signature de l'expéditeur
+\newcommand\signature[1]{%
+	\nopagebreak[5]%
+	\vspace{2ex plus 1ex minus 1ex}%
+	\nopagebreak[5]%
+	\hfill\hfill\parbox{.49\linewidth}{\centering\slshape #1}\hfill%
+}
+
+
 % Fin de document
 
