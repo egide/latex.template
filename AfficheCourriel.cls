@@ -113,6 +113,19 @@
 	\hfill\hfill\parbox{.49\linewidth}{\centering\slshape #1}\hfill%
 }
 
+%[[2 Boite d'explication
+\newcommand\commentaire[2]{%
+	\vfill%
+	\centering%
+	\parbox{.8\linewidth}{%
+		\tiny%
+		\itshape%
+		#1%
+		\par%
+		\hfill%
+		#2%
+	}
+}
 
 % Fin de document
 
