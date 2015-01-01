@@ -3,13 +3,15 @@ Version
 
 Branche
 -------
-Branche de développement.
+Stable
 
 
 Objectif
 --------
-C'est ici que ce fait le gros du travail.
+Ce qui se trouve dans cette branche est censé être utilisable sans problème.
 
-Cette de branche est l'origine de toute les branches de développement et des
-branches pour la création des futures versions stables.
+
+Ajout
+-----
+Cette version ajoute une classe pour l'impression de courrier électronique.
 
