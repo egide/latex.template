@@ -15,4 +15,8 @@ all: force ${SOURCE}
 force:
 	touch ${SOURCE}
 
+.PHONY:clean
+clean:
+	find . -iregex ".*\.\(aux\|log\|toc\|dvi\|ps\|out\)" -delete
+
 #	@pdflatex -halt-on-error lettre.tex | sed "/^\((\|)\|Package\|\s*Copyri\)/d;/./,/^$$/!d"
