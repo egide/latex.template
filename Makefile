@@ -19,4 +19,9 @@ force:
 clean:
 	find . -iregex ".*\.\(aux\|log\|toc\|dvi\|ps\|out\)" -delete
 
+.PHONY:mrpropre
+mrpropre: clean
+	@rm -vf ${SOURCE}
+	@echo "Fichiers cibles supprimés"
+
 #	@pdflatex -halt-on-error lettre.tex | sed "/^\((\|)\|Package\|\s*Copyri\)/d;/./,/^$$/!d"
