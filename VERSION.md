@@ -3,12 +3,15 @@ Version
 
 Branche
 -------
-feature/Makefile
-Parent: ef70a50ff24e0fd5c8c77772b8d83f8a00234ca1
+Stable
 
 
 Objectif
 --------
-Produire un Makefile complet
+Ce qui se trouve dans cette branche est censé être utilisable sans problème.
 
+
+Ajout
+-----
+Fichier Makefile fonctionnel
 
