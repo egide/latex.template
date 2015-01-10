@@ -3,15 +3,12 @@ Version
 
 Branche
 -------
-Stable
+feature/Makefile
+Parent: ef70a50ff24e0fd5c8c77772b8d83f8a00234ca1
 
 
 Objectif
 --------
-Ce qui se trouve dans cette branche est censé être utilisable sans problème.
+Produire un Makefile complet
 
-
-Ajout
------
-Cette version ajoute une classe pour l'impression de courrier électronique.
 
