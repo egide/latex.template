@@ -1,12 +1,15 @@
+#!/usr/bin/make -f
+CC    := pdflatex -interaction nonstopmode $< > /dev/null
 
-CC=pdflatex -interaction nonstopmode @< > /dev/null
+.PHONY:all
+all: lettre.pdf
 
 %.pdf:%.tex
 	@echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-	@$(CC) ; $(CC)
+	@${CC}
 	@echo -e "\n==============================================================================="
-	@texloganalyser -ewr lettre.log
+	@texloganalyser -ewr $(subst %.pdf, %.log, $@)
 
 
 
-%	@pdflatex -halt-on-error lettre.tex | sed "/^\((\|)\|Package\|\s*Copyri\)/d;/./,/^$$/!d"
+#	@pdflatex -halt-on-error lettre.tex | sed "/^\((\|)\|Package\|\s*Copyri\)/d;/./,/^$$/!d"
