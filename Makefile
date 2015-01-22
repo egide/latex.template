@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
-CC        := pdflatex -interaction nonstopmode $< > /dev/null
+CCO       := -interaction nonstopmode
+CCS       := > /dev/null
+CC        := pdflatex ${CCO} $< ${CCS}
 SOURCE    := lettre.pdf
 
 .PHONY:all
