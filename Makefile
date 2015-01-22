@@ -10,6 +10,7 @@ all: force ${SOURCE}
 %.pdf:%.tex
 	@echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	@${CC}
+	@${CC}
 	@echo -e "\n==============================================================================="
 	@texloganalyser -ewr $(subst %.pdf, %.log, $@)
 	@echo "Compilation de $@ terminée"
