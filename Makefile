@@ -5,19 +5,17 @@ CC        := pdflatex ${CCO} $< ${CCS}
 SOURCE    := lettre.pdf
 
 .PHONY:all
-all: force ${SOURCE}
+all: force ${SOURCE} clean
 
 %.pdf:%.tex
-	@echo -e "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	@${CC}
 	@${CC}
-	@echo -e "\n==============================================================================="
-	@texloganalyser -ewr $(subst %.pdf, %.log, $@)
+	@texloganalyser -ewr $(patsubst %.pdf, %.log, $@)
 	@echo "Compilation de $@ terminée"
 
 .PHONY:force
 force:
-	touch ${SOURCE}
+	touch $(patsubst %.pdf, %.tex, ${SOURCE})
 	@echo "Force la compilation des cibles"
 
 .PHONY:clean
@@ -30,4 +28,3 @@ mrpropre: clean
 	@rm -vf ${SOURCE}
 	@echo "Fichiers cibles supprimés"
 
-#	@pdflatex -halt-on-error lettre.tex | sed "/^\((\|)\|Package\|\s*Copyri\)/d;/./,/^$$/!d"
