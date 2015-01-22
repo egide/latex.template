@@ -3,15 +3,15 @@ Version
 
 Branche
 -------
-Stable
+feature/EcoleLecture
+Parent: a3bec0f6c1b6612cc963fcd831afb8521808aae1
 
 
 Objectif
 --------
-Ce qui se trouve dans cette branche est censé être utilisable sans problème.
-
-
-Ajout
------
-Fichier Makefile fonctionnel
+Produire une classe de document pour imprimer les textes que je distribue dans
+les classes:
+* deux colonnes
+* numérotations des lignes
+* entêtes et pieds de pages
 
