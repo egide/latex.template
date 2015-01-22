@@ -1,8 +1,8 @@
 #!/usr/bin/make -f
-CCO       := -interaction nonstopmode
-CCS       := > /dev/null
-CC        := pdflatex ${CCO} $< ${CCS}
-SOURCE    := lettre.pdf
+CCO       = -interaction nonstopmode
+CCS       = > /dev/null
+CC        = pdflatex ${CCO} $< ${CCS}
+SOURCE    = EcoleLecture.pdf
 
 .PHONY:all
 all: force ${SOURCE} clean
