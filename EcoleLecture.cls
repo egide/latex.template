@@ -31,12 +31,32 @@
 %[[1 Constantes
 % Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
-\newcommand\ldate{\today}
-\newcommand\defldate[1]{\renewcommand\ldate{#1}}
+\newcommand\@date{\today}
+\newcommand\date[1]{\renewcommand\@date{#1}}
 
-% Définition de l'expéditeur
-\newcommand\lfrom{inconnu@domain.tld}
-\newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}
+% Titre du document
+\newcommand*{\@titre}{Document sans titre}
+\newcommand*{\titre}[1]{\renewcommand*{\@titre}{#1}}
+
+% Auteur (du document: mise en forme)
+\newcommand*{\@auteur}{Anonyme}
+\newcommand*{\auteur}[1]{\renewcommand*{\@auteur}{#1}}
+
+% Sujet (sous titre)
+\newcommand*{\@sujet}{Document sans sous-titre}
+\newcommand*{\sujet}[1]{\renewcommand*{\@sujet}{#1}}
+
+% Créateur: l'auteur original du texte
+\newcommand*{\@createur}{\@auteur}
+\newcommand*{\createur}[1]{\renewcommand*{\@createur}{#1}}
+
+% Producteur: le logiciel utilisé
+\newcommand*{\@producteur}{LaTeX2E}
+\newcommand*{\producteur}[1]{\renewcommand*{\@producteur}{#1}}
+
+% Mots clés
+\newcommand*{\@motscles}{}
+\newcommand*{\motscles}[1]{\renewcommand*{\@motscles}{#1}}
 
 %[[1 Options
 %[[2 Mise en page
@@ -86,12 +106,12 @@
 %[[1 Commandes personnelles
 %[[2 PDF
 \hypersetup{%
-	pdftitle={},
-	pdfauthor={},
-	pdfsubject={},
-	pdfcreator={},
-	pdfproducer={},
-	pdfkeywords={},
+	pdftitle={\@titre},
+	pdfauthor={\@auteur},
+	pdfsubject={\@sujet},
+	pdfcreator={\@createur},
+	pdfproducer={\@producteur},
+	pdfkeywords={\@motscles},
 }
 
 % Fin de document
