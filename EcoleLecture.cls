@@ -31,8 +31,8 @@
 %[[1 Constantes
 % Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
-\newcommand\@date{\today}
-\newcommand\date[1]{\renewcommand\@date{#1}}
+\newcommand\@mdate{\today}
+\newcommand\mdate[1]{\renewcommand\@mdate{#1}}
 
 % Titre du document
 \newcommand*{\@titre}{Document sans titre}
@@ -99,9 +99,9 @@
 \setfootsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{\lfrom}
+\ifoot[]{\@auteur}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
-\ofoot[]{\ldate}
+\ofoot[]{\@mdate}
 
 %[[1 Commandes personnelles
 %[[2 PDF
