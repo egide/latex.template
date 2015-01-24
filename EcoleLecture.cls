@@ -86,22 +86,26 @@
 \clearscrheadfoot
 
 % Style de page à utiliser
-\thispagestyle{plain}
 \pagestyle{scrheadings}
 
 % Police du pied de page
 \setkomafont{pagefoot}{\normalfont\sffamily\small}
+\setkomafont{pagehead}{\normalfont\sffamily\small}
 
 %numéro de page
 \setkomafont{pagenumber}{\normalfont\rmfamily\slshape\normalsize}
 
 % ligne de séparation
 \setfootsepline{.5pt}
+\setheadsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
 \ifoot[]{\@auteur}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
+\ihead[]{\@titre}
+\chead[]{\@sujet}
+\ohead[]{\@createur}
 
 %[[1 Commandes personnelles
 %[[2 PDF
