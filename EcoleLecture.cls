@@ -25,6 +25,7 @@
 		pdftex%
 	]
 	{geometry}
+\RequirePackage{hyperref}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[[1 Constantes
@@ -83,6 +84,15 @@
 \ofoot[]{\ldate}
 
 %[[1 Commandes personnelles
+%[[2 PDF
+\hypersetup{%
+	pdftitle={},
+	pdfauthor={},
+	pdfsubject={},
+	pdfcreator={},
+	pdfproducer={},
+	pdfkeywords={},
+}
 
 % Fin de document
 
