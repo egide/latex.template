@@ -16,6 +16,8 @@
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
 \RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
+\RequirePackage{multicol}%           Pour mettre le texte en colonnes
+\usepackage{lineno}%                 Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
 		top=2cm,%
 		bottom=2cm,%
@@ -116,6 +118,22 @@
 	pdfcreator={\@createur},
 	pdfproducer={\@producteur},
 	pdfkeywords={\@motscles},
+}
+
+%[[2 Ajout des colonnes
+\newenvironment{colonnes}{%
+	\setlength{\columnsep}{16pt}%
+	\setlength{\columnseprule}{.2pt}
+	\begin{multicols}{2}%
+	\def\linenumberfont{\normalfont\tiny\sffamily\textsuperscript}%
+	\setlength{\linenumbersep}{1pt}%
+	\setpagewiselinenumbers%
+	\modulolinenumbers[2]%
+	\firstlinenumber{1}%
+	\linenumbers%
+}{%
+	\nolinenumbers%
+	\end{multicols}%
 }
 
 % Fin de document
