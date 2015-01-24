@@ -4,7 +4,7 @@
 % sur tableau d'affichage public
 
 \NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible Nom et version de la classe fournie
-\ProvidesClass{AfficheCourriel}[2014/12/23 Classe personnelle, V0.0]
+\ProvidesClass{EcoleLecture}[2014/12/23 Classe personnelle, V0.0]
 \LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript en lui passant les options
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
@@ -83,49 +83,6 @@
 \ofoot[]{\ldate}
 
 %[[1 Commandes personnelles
-%[[2 Liste en tête de document
-\newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
-\newenvironment{mylist}%
-	{%
-		\noindent%
-		\begin{list}{}%
-			{%
-				\setlength{\labelwidth}{6em}%
-				\setlength{\leftmargin}{6.1em}%
-				\setlength{\rightmargin}{1em}%
-				\setlength{\itemsep}{0em}%
-				\setlength{\itemindent}{0em}%
-				\renewcommand{\makelabel}{\entrylabel}%
-			}%
-		\item[Date] \ldate%
-		\item[From] \lfrom%
-	}{%
-		\end{list}%
-		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
-	}
-
-%[[2 Signature
-% Commande pour placer la signature de l'expéditeur
-\newcommand\signature[1]{%
-	\nopagebreak[5]%
-	\vspace{2ex plus 1ex minus 1ex}%
-	\nopagebreak[5]%
-	\hfill\hfill\parbox{.49\linewidth}{\centering\slshape #1}\hfill%
-}
-
-%[[2 Boite d'explication
-\newcommand\commentaire[2]{%
-	\vfill%
-	\centering%
-	\parbox{.8\linewidth}{%
-		\tiny%
-		\itshape%
-		#1%
-		\par%
-		\hfill%
-		#2%
-	}
-}
 
 % Fin de document
 
