@@ -127,6 +127,10 @@
 \chead[]{\@sujet}
 \ohead[]{\@createur}
 
+%[[1 Mise en page
+% Titres
+%Suprime la numérotation des titres
+\setcounter{secnumdepth}{-2}
 %[[1 Commandes personnelles
 %[[2 PDF
 \hypersetup{%
