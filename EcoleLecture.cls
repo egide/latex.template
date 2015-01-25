@@ -38,27 +38,45 @@
 
 % Titre du document
 \newcommand*{\@titre}{Document sans titre}
-\newcommand*{\titre}[1]{\renewcommand*{\@titre}{#1}}
+\newcommand*{\titre}[1]{%
+	\renewcommand*{\@titre}{#1}%
+	\hypersetup{pdftitle={\expandafter\@titre}}%
+}
 
 % Auteur (du document: mise en forme)
 \newcommand*{\@auteur}{Anonyme}
-\newcommand*{\auteur}[1]{\renewcommand*{\@auteur}{#1}}
+\newcommand*{\auteur}[1]{%
+	\renewcommand*{\@auteur}{#1}%
+	\hypersetup{pdfauthor={\@auteur}}%
+}
 
 % Sujet (sous titre)
 \newcommand*{\@sujet}{Document sans sous-titre}
-\newcommand*{\sujet}[1]{\renewcommand*{\@sujet}{#1}}
+\newcommand*{\sujet}[1]{%
+	\renewcommand*{\@sujet}{#1}%
+	\hypersetup{pdfsubject={\@sujet}}%
+}
 
 % Créateur: l'auteur original du texte
 \newcommand*{\@createur}{\@auteur}
-\newcommand*{\createur}[1]{\renewcommand*{\@createur}{#1}}
+\newcommand*{\createur}[1]{%
+	\renewcommand*{\@createur}{#1}%
+	\hypersetup{pdfcreator={\@createur}}%
+}
 
 % Producteur: le logiciel utilisé
 \newcommand*{\@producteur}{LaTeX2E}
-\newcommand*{\producteur}[1]{\renewcommand*{\@producteur}{#1}}
+\newcommand*{\producteur}[1]{%
+	\renewcommand*{\@producteur}{#1}%
+	\hypersetup{pdfproducer={\@producteur}}%
+}
 
 % Mots clés
 \newcommand*{\@motscles}{}
-\newcommand*{\motscles}[1]{\renewcommand*{\@motscles}{#1}}
+\newcommand*{\motscles}[1]{%
+	\renewcommand*{\@motscles}{#1}%
+	\hypersetup{pdfkeywords={\@motscles}}%
+}
 
 %[[1 Options
 %[[2 Mise en page
@@ -112,12 +130,6 @@
 %[[1 Commandes personnelles
 %[[2 PDF
 \hypersetup{%
-	pdftitle={\@titre},
-	pdfauthor={\@auteur},
-	pdfsubject={\@sujet},
-	pdfcreator={\@createur},
-	pdfproducer={\@producteur},
-	pdfkeywords={\@motscles},
 }
 
 %[[2 Ajout des colonnes
