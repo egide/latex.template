@@ -131,6 +131,9 @@
 % Titres
 %Suprime la numérotation des titres
 \setcounter{secnumdepth}{-2}
+\KOMAoptions{%
+	headings=small, % petite écriture pour les titres
+}
 %[[1 Commandes personnelles
 %[[2 PDF
 \hypersetup{%
