@@ -139,6 +139,17 @@
 \hypersetup{%
 }
 
+%[[2 Titre
+\renewcommand{\maketitle}{%
+	\begin{center}%
+		\centering%
+		\vspace*{1em plus 1em minus 3em}%
+			\LARGE%
+			\@titre%
+		\vspace{1em plus 1em minus 1.5em}%
+	\end{center}%
+}
+
 %[[2 Ajout des colonnes
 \newenvironment{colonnes}{%
 	\setlength{\columnsep}{16pt}%
