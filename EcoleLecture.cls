@@ -15,7 +15,7 @@
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
-\RequirePackage{scrpage2}%           Gestion des entêtes et pieds de pages
+\RequirePackage{scrlayer-scrpage}%   Gestion des entêtes et pieds de pages
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
 \usepackage{lineno}%                 Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
