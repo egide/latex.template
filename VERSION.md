@@ -15,3 +15,8 @@ les classes:
 * numérotations des lignes
 * entêtes et pieds de pages
 
+État
+====
+Le modèle est fonctionnel.
+La gestion du titre n'est pas vraiment géniale... Je ne devrais normalement pas
+l'utiliser!
