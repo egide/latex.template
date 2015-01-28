@@ -8,7 +8,7 @@ SOURCE    = EcoleLecture.pdf
 all: force ${SOURCE} clean
 
 %.pdf:%.tex
-	@${CC} ; @${CC}
+	@${CC} ; ${CC}
 	@echo -e "\n\n\n\n\n\n==============================="
 	@texloganalyser -ewr $(patsubst %.pdf, %.log, $@)
 	@echo "Compilation de $@ terminée"
