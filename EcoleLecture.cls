@@ -30,47 +30,47 @@
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[1 Constantes
-% Définition de la date
+%[2  \@mdate Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
 \newcommand\@mdate{\today}
 \newcommand\mdate[1]{\renewcommand\@mdate{#1}}
 
-% Titre du document
+%[2 \@titre Titre du document
 \newcommand*{\@titre}{Document sans titre}
 \newcommand*{\titre}[1]{%
 	\renewcommand*{\@titre}{#1}%
 	\hypersetup{pdftitle={\expandafter\@titre}}%
 }
 
-% Auteur (du document: mise en forme)
+%[2 \@auteur Auteur (du document: mise en forme)
 \newcommand*{\@auteur}{Anonyme}
 \newcommand*{\auteur}[1]{%
 	\renewcommand*{\@auteur}{#1}%
 	\hypersetup{pdfauthor={\@auteur}}%
 }
 
-% Sujet (sous titre)
+%[2 \@sujet Sujet (sous titre)
 \newcommand*{\@sujet}{Document sans sous-titre}
 \newcommand*{\sujet}[1]{%
 	\renewcommand*{\@sujet}{#1}%
 	\hypersetup{pdfsubject={\@sujet}}%
 }
 
-% Créateur: l'auteur original du texte
+%[2 \@createur Créateur: l'auteur original du texte
 \newcommand*{\@createur}{\@auteur}
 \newcommand*{\createur}[1]{%
 	\renewcommand*{\@createur}{#1}%
 	\hypersetup{pdfcreator={\@createur}}%
 }
 
-% Producteur: le logiciel utilisé
+%[2 \@producteur Producteur: le logiciel utilisé
 \newcommand*{\@producteur}{LaTeX2E}
 \newcommand*{\producteur}[1]{%
 	\renewcommand*{\@producteur}{#1}%
 	\hypersetup{pdfproducer={\@producteur}}%
 }
 
-% Mots clés
+%[2 \@motscles Mots clés
 \newcommand*{\@motscles}{}
 \newcommand*{\motscles}[1]{%
 	\renewcommand*{\@motscles}{#1}%
