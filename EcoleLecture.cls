@@ -24,9 +24,8 @@
 		left=2cm,%
 		right=2cm,%
 		footskip=1cm,%
-		pdftex%
-	]
-	{geometry}
+		pdftex,%
+	]{geometry}
 \RequirePackage{hyperref}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
@@ -85,7 +84,7 @@
 		top=1cm,%
 		bottom=2cm,%
 		left=1cm,%
-		right=1cm%
+		right=1cm,%
 	}
 }
 
@@ -94,7 +93,7 @@
 		top=3cm,%
 		bottom=3cm,%
 		left=3cm,%
-		right=3cm%
+		right=3cm,%
 	}
 }
 
@@ -153,7 +152,7 @@
 %[[2 Ajout des colonnes
 \newenvironment{colonnes}{%
 	\setlength{\columnsep}{16pt}%
-	\setlength{\columnseprule}{.2pt}
+	\setlength{\columnseprule}{.2pt}%
 	\begin{multicols}{2}%
 	\def\linenumberfont{\normalfont\tiny\sffamily\textsuperscript}%
 	\setlength{\linenumbersep}{1pt}%
