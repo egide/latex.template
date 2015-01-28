@@ -14,8 +14,8 @@ all: force ${SOURCE} clean
 	@echo "Compilation de $@ terminée"
 
 force:
-	touch $(patsubst %.pdf, %.tex, ${SOURCE})
-	@echo "Force la compilation des cibles"
+	@echo "Force la compilation des cibles : ${SOURCE}"
+	@touch $(patsubst %.pdf, %.tex, ${SOURCE})
 
 clean:
 	find . -iregex ".*\.\(aux\|log\|toc\|dvi\|ps\|out\)" -delete
