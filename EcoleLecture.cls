@@ -1,5 +1,5 @@
-%[[1 Définitions de base
-% vim: set nospell fdm=marker foldmarker=[[,]] filetype=tex :
+%[1 Définitions de base
+% vim: set nospell fdm=marker foldmarker=%[,%] filetype=tex :
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau d'affichage public
 
@@ -9,7 +9,7 @@
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
 
-%[[1 Extentions
+%[1 Extentions
 \RequirePackage{xspace}%             Gestion des espaces suivants les macros
 \RequirePackage{lmodern}%            Police postscript pour une sortie correcte en pdf
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
@@ -29,7 +29,7 @@
 \RequirePackage{hyperref}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
-%[[1 Constantes
+%[1 Constantes
 % Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
 \newcommand\@mdate{\today}
@@ -77,9 +77,9 @@
 	\hypersetup{pdfkeywords={\@motscles}}%
 }
 
-%[[1 Options
-%[[2 Mise en page
-\DeclareOption{margepetite}{%[[3
+%[1 Options
+%[2 Mise en page
+\DeclareOption{margepetite}{%[3
 	\geometry{%
 		top=1cm,%
 		bottom=2cm,%
@@ -88,7 +88,7 @@
 	}
 }
 
-\DeclareOption{margegrande}{%[[3
+\DeclareOption{margegrande}{%[3
 	\geometry{%
 		top=3cm,%
 		bottom=3cm,%
@@ -100,7 +100,7 @@
 
 \ProcessOptions
 
-%[[1 Entêtes et pieds de pages
+%[1 Entêtes et pieds de pages
 % vide le contenu des entêtes et pieds de pages
 \clearscrheadfoot
 
@@ -126,19 +126,19 @@
 \chead[]{\@sujet}
 \ohead[]{\@createur}
 
-%[[1 Mise en page
+%[1 Mise en page
 % Titres
 %Suprime la numérotation des titres
 \setcounter{secnumdepth}{-2}
 \KOMAoptions{%
 	headings=small, % petite écriture pour les titres
 }
-%[[1 Commandes personnelles
-%[[2 PDF
+%[1 Commandes personnelles
+%[2 PDF
 \hypersetup{%
 }
 
-%[[2 Titre
+%[2 Titre
 \renewcommand{\maketitle}{%
 	\begin{center}%
 		\centering%
@@ -149,7 +149,7 @@
 	\end{center}%
 }
 
-%[[2 Ajout des colonnes
+%[2 Ajout des colonnes
 \newenvironment{colonnes}{%
 	\setlength{\columnsep}{16pt}%
 	\setlength{\columnseprule}{.2pt}%
