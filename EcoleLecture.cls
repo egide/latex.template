@@ -143,8 +143,8 @@
 \addtokomafont{subsubsection}{\rmfamily}
 \addtokomafont{paragraph}{\rmfamily}
 \addtokomafont{subparagraph}{\rmfamily}
-\addtokomafont{pagehead}{\rmfamily\scriptsize}
-\addtokomafont{pagefoot}{\rmfamily\scriptsize}
+\addtokomafont{pagehead}{\rmfamily\footnotesize}
+\addtokomafont{pagefoot}{\rmfamily\footnotesize}
 
 %[1 Commandes personnelles
 %[2 PDF
