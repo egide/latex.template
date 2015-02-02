@@ -136,6 +136,16 @@
 	headings=small, % petite écriture pour les titres
 }
 
+% Caractère des titres
+\addtokomafont{part}{\rmfamily}
+\addtokomafont{section}{\rmfamily}
+\addtokomafont{subsection}{\rmfamily}
+\addtokomafont{subsubsection}{\rmfamily}
+\addtokomafont{paragraph}{\rmfamily}
+\addtokomafont{subparagraph}{\rmfamily}
+\addtokomafont{pagehead}{\rmfamily\scriptsize}
+\addtokomafont{pagefoot}{\rmfamily\scriptsize}
+
 %[1 Commandes personnelles
 %[2 PDF
 \hypersetup{%
