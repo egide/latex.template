@@ -19,13 +19,15 @@
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
 \usepackage{lineno}%                 Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
-		top=2cm,%
-		bottom=2cm,%
-		inner=2.2cm,%
-		outer=1.8cm,%
-		footskip=1cm,%
-		pdftex,%
-	]{geometry}
+	includehead,%
+	includefoot,%
+	top=1cm,%
+	bottom=1cm,%
+	inner=2.2cm,%
+	outer=1.8cm,%
+	footskip=1cm,%
+	pdftex,%
+]{geometry}
 \RequirePackage{hyperref}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
@@ -133,6 +135,7 @@
 \KOMAoptions{%
 	headings=small, % petite écriture pour les titres
 }
+
 %[1 Commandes personnelles
 %[2 PDF
 \hypersetup{%
