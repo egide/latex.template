@@ -21,8 +21,8 @@
 \RequirePackage[%                    Gestion des marges
 		top=2cm,%
 		bottom=2cm,%
-		left=2.2cm,%
-		right=1.8cm,%
+		inner=2.2cm,%
+		outer=1.8cm,%
 		footskip=1cm,%
 		pdftex,%
 	]{geometry}
@@ -83,8 +83,8 @@
 	\geometry{%
 		top=1cm,%
 		bottom=2cm,%
-		left=1cm,%
-		right=1cm,%
+		inner=1cm,%
+		outer=1cm,%
 	}
 }
 
@@ -92,8 +92,8 @@
 	\geometry{%
 		top=3cm,%
 		bottom=3cm,%
-		left=3cm,%
-		right=3cm,%
+		inner=3cm,%
+		outer=3cm,%
 	}
 }
 
