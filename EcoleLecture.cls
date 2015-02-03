@@ -19,13 +19,15 @@
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
 \usepackage{lineno}%                 Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
-		top=2cm,%
-		bottom=2cm,%
-		left=2cm,%
-		right=2cm,%
-		footskip=1cm,%
-		pdftex,%
-	]{geometry}
+	includehead,%
+	includefoot,%
+	top=1cm,%
+	bottom=1cm,%
+	inner=2.2cm,%
+	outer=1.8cm,%
+	footskip=1cm,%
+	pdftex,%
+]{geometry}
 \RequirePackage{hyperref}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
@@ -37,30 +39,54 @@
 
 %[2 \@titre Titre du document
 \newcommand*{\@titre}{Document sans titre}
-\newcommand*{\titre}[1]{%
-	\renewcommand*{\@titre}{#1}%
-	\hypersetup{pdftitle={\expandafter\@titre}}%
+\newcommand*{\@titrehead}{Document sans titre}
+\newcommand*{\titre}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@titrehead}{#2}%
+	\else%
+		\renewcommand*{\@titrehead}{#1}%
+	\fi%
+	\renewcommand*{\@titre}{#2}%
+	\hypersetup{pdftitle={\expandafter\@titrehead}}%
 }
 
-%[2 \@auteur Auteur (du document: mise en forme)
+%[2 \@auteur Auteur: Auteur original du texte
 \newcommand*{\@auteur}{Anonyme}
-\newcommand*{\auteur}[1]{%
-	\renewcommand*{\@auteur}{#1}%
-	\hypersetup{pdfauthor={\@auteur}}%
+\newcommand*{\@auteurhead}{Anonyme}
+\newcommand*{\auteur}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@auteurhead}{#2}%
+	\else%
+		\renewcommand*{\@auteurhead}{#1}%
+	\fi%
+	\renewcommand*{\@auteur}{#2}%
+	\hypersetup{pdfauthor={\@auteurhead}}%
 }
 
 %[2 \@sujet Sujet (sous titre)
 \newcommand*{\@sujet}{Document sans sous-titre}
-\newcommand*{\sujet}[1]{%
-	\renewcommand*{\@sujet}{#1}%
-	\hypersetup{pdfsubject={\@sujet}}%
+\newcommand*{\@sujethead}{Document sans sous-titre}
+\newcommand*{\sujet}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@sujethead}{#2}%
+	\else%
+		\renewcommand*{\@sujethead}{#1}%
+	\fi%
+	\renewcommand*{\@sujet}{#2}%
+	\hypersetup{pdfsubject={\@sujethead}}%
 }
 
-%[2 \@createur Créateur: l'auteur original du texte
+%[2 \@createur Créateur: Celui qui fait la mise en page
 \newcommand*{\@createur}{\@auteur}
-\newcommand*{\createur}[1]{%
-	\renewcommand*{\@createur}{#1}%
-	\hypersetup{pdfcreator={\@createur}}%
+\newcommand*{\@createurhead}{\@auteur}
+\newcommand*{\createur}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@createurhead}{#2}%
+	\else%
+		\renewcommand*{\@createurhead}{#1}%
+	\fi%
+	\renewcommand*{\@createur}{#2}%
+	\hypersetup{pdfcreator={\@createurhead}}%
 }
 
 %[2 \@producteur Producteur: le logiciel utilisé
@@ -81,19 +107,19 @@
 %[2 Mise en page
 \DeclareOption{margepetite}{%[3
 	\geometry{%
-		top=1cm,%
-		bottom=2cm,%
-		left=1cm,%
-		right=1cm,%
+		top=0.5cm,%
+		bottom=0.6cm,%
+		inner=2cm,%
+		outer=0.8cm,%
 	}
 }
 
 \DeclareOption{margegrande}{%[3
 	\geometry{%
-		top=3cm,%
-		bottom=3cm,%
-		left=3cm,%
-		right=3cm,%
+		top=1.5cm,%
+		bottom=1.5cm,%
+		inner=3cm,%
+		outer=2cm,%
 	}
 }
 
@@ -119,12 +145,12 @@
 \setheadsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{\@auteur}
+\ifoot[]{\@createurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
-\ihead[]{\@titre}
-\chead[]{\@sujet}
-\ohead[]{\@createur}
+\ihead[]{\@titrehead}
+\chead[]{\@sujethead}
+\ohead[]{\@auteurhead}
 
 %[1 Mise en page
 % Titres
@@ -133,6 +159,17 @@
 \KOMAoptions{%
 	headings=small, % petite écriture pour les titres
 }
+
+% Caractère des titres
+\addtokomafont{part}{\rmfamily}
+\addtokomafont{section}{\rmfamily}
+\addtokomafont{subsection}{\rmfamily}
+\addtokomafont{subsubsection}{\rmfamily}
+\addtokomafont{paragraph}{\rmfamily}
+\addtokomafont{subparagraph}{\rmfamily}
+\addtokomafont{pagehead}{\rmfamily\footnotesize}
+\addtokomafont{pagefoot}{\rmfamily\footnotesize}
+
 %[1 Commandes personnelles
 %[2 PDF
 \hypersetup{%
@@ -145,6 +182,14 @@
 		\vspace*{1em plus 1em minus 3em}%
 			\LARGE%
 			\@titre%
+			\par%
+		\vspace{1ex plus 1ex minus 1.5ex}%
+			\large%
+			\@sujet%
+			\par%
+		\vspace{1ex plus 1ex minus 1.5ex}%
+			\large%
+			\@auteur%
 		\vspace{1em plus 1em minus 1.5em}%
 	\end{center}%
 }
