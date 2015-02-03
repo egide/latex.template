@@ -59,9 +59,15 @@
 
 %[2 \@sujet Sujet (sous titre)
 \newcommand*{\@sujet}{Document sans sous-titre}
-\newcommand*{\sujet}[1]{%
+\newcommand*{\@sujethead}{Document sans sous-titre}
+\newcommand*{\sujet}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@sujethead}{#2}%
+	\else%
+		\renewcommand*{\@sujethead}{#1}%
+	\fi%
 	\renewcommand*{\@sujet}{#1}%
-	\hypersetup{pdfsubject={\@sujet}}%
+	\hypersetup{pdfsubject={\@sujethead}}%
 }
 
 %[2 \@createur Créateur: l'auteur original du texte
@@ -131,7 +137,7 @@
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
 \ihead[]{\@titrehead}
-\chead[]{\@sujet}
+\chead[]{\@sujethead}
 \ohead[]{\@createur}
 
 %[1 Mise en page
@@ -164,6 +170,10 @@
 		\vspace*{1em plus 1em minus 3em}%
 			\LARGE%
 			\@titre%
+			\par%
+		\vspace{1ex plus 1ex minus 1.5ex}%
+			\large%
+			\@sujet%
 		\vspace{1em plus 1em minus 1.5em}%
 	\end{center}%
 }
