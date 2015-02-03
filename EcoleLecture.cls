@@ -72,7 +72,7 @@
 	\else%
 		\renewcommand*{\@sujethead}{#1}%
 	\fi%
-	\renewcommand*{\@sujet}{#1}%
+	\renewcommand*{\@sujet}{#2}%
 	\hypersetup{pdfsubject={\@sujethead}}%
 }
 
