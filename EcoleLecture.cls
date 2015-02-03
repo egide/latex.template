@@ -52,9 +52,15 @@
 
 %[2 \@auteur Auteur (du document: mise en forme)
 \newcommand*{\@auteur}{Anonyme}
-\newcommand*{\auteur}[1]{%
-	\renewcommand*{\@auteur}{#1}%
-	\hypersetup{pdfauthor={\@auteur}}%
+\newcommand*{\@auteurhead}{Anonyme}
+\newcommand*{\auteur}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@auteurhead}{#2}%
+	\else%
+		\renewcommand*{\@auteurhead}{#1}%
+	\fi%
+	\renewcommand*{\@auteur}{#2}%
+	\hypersetup{pdfauthor={\@auteurhead}}%
 }
 
 %[2 \@sujet Sujet (sous titre)
@@ -133,7 +139,7 @@
 \setheadsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{\@auteur}
+\ifoot[]{\@auteurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
 \ihead[]{\@titrehead}
@@ -174,6 +180,10 @@
 		\vspace{1ex plus 1ex minus 1.5ex}%
 			\large%
 			\@sujet%
+			\par%
+		\vspace{1ex plus 1ex minus 1.5ex}%
+			\large%
+			\@auteur%
 		\vspace{1em plus 1em minus 1.5em}%
 	\end{center}%
 }
