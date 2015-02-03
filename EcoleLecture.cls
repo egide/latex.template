@@ -78,9 +78,15 @@
 
 %[2 \@createur Créateur: l'auteur original du texte
 \newcommand*{\@createur}{\@auteur}
-\newcommand*{\createur}[1]{%
-	\renewcommand*{\@createur}{#1}%
-	\hypersetup{pdfcreator={\@createur}}%
+\newcommand*{\@createurhead}{\@auteur}
+\newcommand*{\createur}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@createurhead}{#2}%
+	\else%
+		\renewcommand*{\@createurhead}{#1}%
+	\fi%
+	\renewcommand*{\@createur}{#2}%
+	\hypersetup{pdfcreator={\@createurhead}}%
 }
 
 %[2 \@producteur Producteur: le logiciel utilisé
@@ -144,7 +150,7 @@
 \ofoot[]{\@mdate}
 \ihead[]{\@titrehead}
 \chead[]{\@sujethead}
-\ohead[]{\@createur}
+\ohead[]{\@createurhead}
 
 %[1 Mise en page
 % Titres
