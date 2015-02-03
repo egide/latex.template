@@ -50,7 +50,7 @@
 	\hypersetup{pdftitle={\expandafter\@titrehead}}%
 }
 
-%[2 \@auteur Auteur (du document: mise en forme)
+%[2 \@auteur Auteur: Auteur original du texte
 \newcommand*{\@auteur}{Anonyme}
 \newcommand*{\@auteurhead}{Anonyme}
 \newcommand*{\auteur}[2][\null]{%
@@ -76,7 +76,7 @@
 	\hypersetup{pdfsubject={\@sujethead}}%
 }
 
-%[2 \@createur Créateur: l'auteur original du texte
+%[2 \@createur Créateur: Celui qui fait la mise en page
 \newcommand*{\@createur}{\@auteur}
 \newcommand*{\@createurhead}{\@auteur}
 \newcommand*{\createur}[2][\null]{%
@@ -145,12 +145,12 @@
 \setheadsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{\@auteurhead}
+\ifoot[]{\@createurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
 \ihead[]{\@titrehead}
 \chead[]{\@sujethead}
-\ohead[]{\@createurhead}
+\ohead[]{\@auteurhead}
 
 %[1 Mise en page
 % Titres
