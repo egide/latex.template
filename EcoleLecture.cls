@@ -39,9 +39,15 @@
 
 %[2 \@titre Titre du document
 \newcommand*{\@titre}{Document sans titre}
-\newcommand*{\titre}[1]{%
-	\renewcommand*{\@titre}{#1}%
-	\hypersetup{pdftitle={\expandafter\@titre}}%
+\newcommand*{\@titrehead}{Document sans titre}
+\newcommand*{\titre}[2][\null]{%
+	\ifx#1\null%
+		\renewcommand*{\@titrehead}{#2}%
+	\else%
+		\renewcommand*{\@titrehead}{#1}%
+	\fi%
+	\renewcommand*{\@titre}{#2}%
+	\hypersetup{pdftitle={\expandafter\@titrehead}}%
 }
 
 %[2 \@auteur Auteur (du document: mise en forme)
@@ -124,7 +130,7 @@
 \ifoot[]{\@auteur}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\@mdate}
-\ihead[]{\@titre}
+\ihead[]{\@titrehead}
 \chead[]{\@sujet}
 \ohead[]{\@createur}
 
