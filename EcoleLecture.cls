@@ -83,19 +83,19 @@
 %[2 Mise en page
 \DeclareOption{margepetite}{%[3
 	\geometry{%
-		top=1cm,%
-		bottom=2cm,%
-		inner=1cm,%
-		outer=1cm,%
+		top=0.5cm,%
+		bottom=0.6cm,%
+		inner=2cm,%
+		outer=0.8cm,%
 	}
 }
 
 \DeclareOption{margegrande}{%[3
 	\geometry{%
-		top=3cm,%
-		bottom=3cm,%
+		top=1.5cm,%
+		bottom=1.5cm,%
 		inner=3cm,%
-		outer=3cm,%
+		outer=2cm,%
 	}
 }
 
