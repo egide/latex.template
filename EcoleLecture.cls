@@ -197,7 +197,7 @@
 %[2 Ajout des colonnes
 \newenvironment{colonnes}{%
 	\setlength{\columnsep}{16pt}%
-	\setlength{\columnseprule}{.1pt}%
+%	\setlength{\columnseprule}{.1pt}%
 	\begin{multicols}{2}%
 	\def\linenumberfont{\normalfont\tiny\sffamily\textsuperscript}%
 	\setlength{\linenumbersep}{1pt}%
