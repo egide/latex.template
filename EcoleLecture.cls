@@ -108,29 +108,6 @@
 	\hypersetup{pdfkeywords={\@motscles}}%
 }
 
-%[1 Options
-%[2 Mise en page
-\DeclareOption{margepetite}{%[3
-	\geometry{%
-		top=0.5cm,%
-		bottom=0.6cm,%
-		inner=2cm,%
-		outer=0.8cm,%
-	}
-}
-
-\DeclareOption{margegrande}{%[3
-	\geometry{%
-		top=1.5cm,%
-		bottom=1.5cm,%
-		inner=3cm,%
-		outer=2cm,%
-	}
-}
-
-
-\ProcessOptions
-
 %[1 Entêtes et pieds de pages
 % vide le contenu des entêtes et pieds de pages
 \clearscrheadfoot
@@ -219,4 +196,27 @@
 }
 
 % Fin de document
+
+%[1 Options
+%[2 Mise en page
+\DeclareOption{margepetite}{%[3
+	\geometry{%
+		top=0.5cm,%
+		bottom=0.6cm,%
+		inner=2cm,%
+		outer=0.8cm,%
+	}
+}
+
+\DeclareOption{margegrande}{%[3
+	\geometry{%
+		top=1.5cm,%
+		bottom=1.5cm,%
+		inner=3cm,%
+		outer=2cm,%
+	}
+}
+
+
+\ProcessOptions
 
