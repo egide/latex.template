@@ -1,6 +1,6 @@
 %[1 Définitions de base
 % vim: set nospell fdm=marker foldmarker=%[,%] filetype=tex :
-% Classe pour l'impression de courriel pour l'affichage
+% Classe pour l'impression de textes de lecture suivie en classe
 % sur tableau d'affichage public
 
 \NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible Nom et version de la classe fournie
@@ -15,7 +15,11 @@
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
-\RequirePackage{scrlayer-scrpage}%   Gestion des entêtes et pieds de pages
+\RequirePackage[%                    Gestion des entêtes et pieds de pages
+	footsepline=.1pt,
+	headsepline=.1pt,
+	plainfootsepline=true
+]{scrlayer-scrpage}%
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
 \RequirePackage[np]{numprint}%       Mise en forme des chiffres
 \usepackage{lineno}%                 Numérotation des lignes
@@ -142,9 +146,6 @@
 \setkomafont{pagenumber}{\normalfont\rmfamily\slshape\normalsize}
 
 % ligne de séparation
-\setfootsepline{.5pt}
-\setheadsepline{.5pt}
-
 % Contenu i: intérieur ; c: centre ; o: extérieur
 \ifoot[\@createurhead]{\@createurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
