@@ -146,6 +146,7 @@
 % Caractère des titres
 \addtokomafont{part}{\rmfamily}
 \addtokomafont{section}{\rmfamily}
+\addtokomafont{minisec}{\rmfamily}
 \addtokomafont{subsection}{\rmfamily}
 \addtokomafont{subsubsection}{\rmfamily}
 \addtokomafont{paragraph}{\rmfamily}
