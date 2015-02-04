@@ -17,6 +17,7 @@
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
 \RequirePackage{scrlayer-scrpage}%   Gestion des entêtes et pieds de pages
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
+\RequirePackage[np]{numprint}%       Mise en forme des chiffres
 \usepackage{lineno}%                 Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
 	includehead,%
