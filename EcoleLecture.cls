@@ -6,6 +6,10 @@
 \NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible Nom et version de la classe fournie
 \ProvidesClass{EcoleLecture}[2014/12/23 Classe personnelle, V0.0]
 \LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript en lui passant les options
+\KOMAoptions{%
+	twoside,
+}
+
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
 
@@ -137,7 +141,6 @@
 \setcounter{secnumdepth}{-2}
 \KOMAoptions{%
 	headings=small, % petite écriture pour les titres
-	twoside,
 }
 
 % Caractère des titres
