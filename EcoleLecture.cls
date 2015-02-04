@@ -183,6 +183,7 @@
 
 %[2 Titre
 \renewcommand{\maketitle}{%
+	\thispagestyle{plain}
 	\begin{center}%
 		\centering%
 		\vspace*{.5em plus 1em minus 2em}%
