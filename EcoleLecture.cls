@@ -137,6 +137,7 @@
 \setcounter{secnumdepth}{-2}
 \KOMAoptions{%
 	headings=small, % petite écriture pour les titres
+	twoside,
 }
 
 % Caractère des titres
@@ -199,6 +200,10 @@
 
 %[1 Options
 %[2 Mise en page
+\DeclareOption{oneside}{%[3
+	\KOMAoptions{twoside=false}
+}
+
 \DeclareOption{margepetite}{%[3
 	\geometry{%
 		top=0.5cm,%
@@ -217,6 +222,5 @@
 	}
 }
 
-
-\ProcessOptions
+\ProcessOptions\relax
 
