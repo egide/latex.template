@@ -174,6 +174,11 @@
 %[1 Commandes personnelles
 %[2 PDF
 \hypersetup{%
+	colorlinks=true,%		colorise les liens
+	breaklinks=true,%		permet les retours à la ligne pour les liens trop longs
+	urlcolor= blue,%		couleur des hyperliens
+	linkcolor= blue,%		couleur des liens internes aux documents (index, figures, tableaux, equations,...)
+	citecolor= green%		couleur des liens vers les references bibliographiques
 }
 
 %[2 Titre
