@@ -146,9 +146,9 @@
 \setheadsepline{.5pt}
 
 % Contenu i: intérieur ; c: centre ; o: extérieur
-\ifoot[]{\@createurhead}
+\ifoot[\@createurhead]{\@createurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
-\ofoot[]{\@mdate}
+\ofoot[\@mdate]{\@mdate}
 \ihead[]{\@titrehead}
 \chead[]{\@sujethead}
 \ohead[]{\@auteurhead}
