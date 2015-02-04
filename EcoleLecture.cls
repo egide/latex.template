@@ -200,7 +200,7 @@
 %	\setlength{\columnseprule}{.1pt}%
 	\begin{multicols}{2}%
 	\def\linenumberfont{\normalfont\tiny\sffamily\textsuperscript}%
-	\setlength{\linenumbersep}{1pt}%
+	\setlength{\linenumbersep}{0pt}%
 	\setpagewiselinenumbers%
 	\modulolinenumbers[2]%
 	\firstlinenumber{1}%
