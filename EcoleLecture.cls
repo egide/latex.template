@@ -19,6 +19,7 @@
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
 \RequirePackage{array}%              Tableaux complexe
 \RequirePackage{lastpage}%           connaître le numéro de la dernière page
+\RequirePackage{paralist}%           Liste compactes
 \RequirePackage[%                    Gestion des entêtes et pieds de pages
 	footsepline=.1pt,
 	headsepline=.1pt,
