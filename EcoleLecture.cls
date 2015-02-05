@@ -169,8 +169,7 @@
 	\thispagestyle{plain}
 	\begin{center}%
 		\centering%
-		\vspace*{.5em plus 1em minus 2em}%
-			\LARGE%
+			\Large%
 			\@titre%
 			\par%
 		\vspace{1ex plus 1ex minus 1.5ex}%
@@ -178,7 +177,7 @@
 			\@sujet%
 			\par%
 		\vspace{1ex plus 1ex minus 1.5ex}%
-			\large%
+			\normalsize%
 			\@auteur%
 		\vspace{1em plus 2em minus 1.5em}%
 	\end{center}%
