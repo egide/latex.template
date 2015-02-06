@@ -166,6 +166,7 @@
 }
 
 %[2 Titre
+%[3 Titre du document
 \renewcommand{\maketitle}{%
 	\thispagestyle{plain}
 	\begin{center}%
@@ -182,6 +183,48 @@
 			\@auteur%
 		\vspace{1em plus 2em minus 1.5em}%
 	\end{center}%
+}
+
+%[3 Titraille
+\let\mypart\part%[4
+\def\part#1#2{%
+	\begingroup%
+	\nolinenumbers%
+	\mypart[#1]{#2}%
+	\endgroup%
+}
+
+\let\mysection\section%[4
+\renewcommand{\section}[2][\null]{%
+%\def\section#1#2{%
+	\begingroup%
+	\nolinenumbers%
+	\mysection[#1]{#2}%
+	\endgroup%
+}
+
+\let\myminisec\minisec%[4
+\def\minisec#1#2{%
+	\begingroup%
+	\nolinenumbers%
+	\myminisec[#1]{#2}%
+	\endgroup%
+}
+
+\let\mysubsection\subsection%[4
+\def\subsection#1#2{%
+	\begingroup%
+	\nolinenumbers%
+	\mysubsection[#1]{#2}%
+	\endgroup%
+}
+
+\let\mysubsubsection\subsubsection%[4
+\def\subsubsection#1#2{%
+	\begingroup%
+	\nolinenumbers%
+	\mysubsubsection[#1]{#2}%
+	\endgroup%
 }
 
 %[2 Ajout des colonnes
