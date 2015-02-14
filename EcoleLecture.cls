@@ -186,43 +186,43 @@
 }
 
 %[3 Titraille
-\let\mypart\part%[4
+\let\oldpart\part%[4
 \renewcommand{\part}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
-	\mypart[#1]{#2}%
+	\oldpart[#1]{#2}%
 	\endgroup%
 }
 
-\let\mysection\section%[4
+\let\oldsection\section%[4
 \renewcommand{\section}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
-	\mysection[#1]{#2}%
+	\oldsection[#1]{#2}%
 	\endgroup%
 }
 
-\let\myminisec\minisec%[4
+\let\oldminisec\minisec%[4
 \renewcommand{\minisec}[1]{%
 	\begingroup%
 	\nolinenumbers%
-	\myminisec{#1}%
+	\oldminisec{#1}%
 	\endgroup%
 }
 
-\let\mysubsection\subsection%[4
+\let\oldsubsection\subsection%[4
 \renewcommand{\subsection}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
-	\mysubsection[#1]{#2}%
+	\oldsubsection[#1]{#2}%
 	\endgroup%
 }
 
-\let\mysubsubsection\subsubsection%[4
+\let\oldsubsubsection\subsubsection%[4
 \renewcommand{\subsubsection}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
-	\mysubsubsection[#1]{#2}%
+	\oldsubsubsection[#1]{#2}%
 	\endgroup%
 }
 
