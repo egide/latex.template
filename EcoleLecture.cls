@@ -187,7 +187,7 @@
 
 %[3 Titraille
 \let\mypart\part%[4
-\def\part#1#2{%
+\renewcommand{\part}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
 	\mypart[#1]{#2}%
@@ -196,7 +196,6 @@
 
 \let\mysection\section%[4
 \renewcommand{\section}[2][\null]{%
-%\def\section#1#2{%
 	\begingroup%
 	\nolinenumbers%
 	\mysection[#1]{#2}%
@@ -204,15 +203,15 @@
 }
 
 \let\myminisec\minisec%[4
-\def\minisec#1#2{%
+\renewcommand{\minisec}[1]{%
 	\begingroup%
 	\nolinenumbers%
-	\myminisec[#1]{#2}%
+	\myminisec{#1}%
 	\endgroup%
 }
 
 \let\mysubsection\subsection%[4
-\def\subsection#1#2{%
+\renewcommand{\subsection}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
 	\mysubsection[#1]{#2}%
@@ -220,7 +219,7 @@
 }
 
 \let\mysubsubsection\subsubsection%[4
-\def\subsubsection#1#2{%
+\renewcommand{\subsubsection}[2][\null]{%
 	\begingroup%
 	\nolinenumbers%
 	\mysubsubsection[#1]{#2}%
