@@ -3,25 +3,17 @@ Version
 
 Branche
 -------
-master
-
-fusion de:
-feature/EcoleLectureMarge
-Parent: c20b97ecc4fe354a236034db49b755dd63c95da4
+feature/EcoleLecture.titraille
+Parent: 487fc6fcd1854fe732a2e26c43643a9be1a662ef
 
 
 Objectif
 --------
-Gérer le problème de marge du modèle
+Il y a un soucis avec la gestion des espaces verticaux avant les titres après la
+redéfinition de la titraille. Je dois trouver un autre moyen de supprimer la
+numérotation des lignes.
 
 État
 ====
-Fonctionnel:
-- meilleure gestion des marges
-- inversion de l'auteur et du créateur
-- ajout de version court pour:
-	- titre
-	- sujet
-	- auteur
-	- créateur
+Bogue à l'affichage.
 
