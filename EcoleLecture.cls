@@ -186,38 +186,20 @@
 }
 
 %[3 Titraille
-\newcommand{\partnonum}[2][\null]{%[4
-	\begingroup%
-	\nolinenumbers%
-	\part[#1]{#2}%
-	\endgroup%
-}
+\let\oldpart\part%[4
+\renewcommand{\part}[2][\null]{\oldpart[#1]{\nolinenumbers #2}}
 
-\newcommand{\sectionnonum}[2][\null]{%[4
-	%
-	\section[#1]{\nolinenumbers #2}%
-}
+\let\oldsection\section%[4
+\renewcommand{\section}[2][\null]{\oldsection[#1]{\nolinenumbers #2}}
 
-\newcommand{\minisecnonum}[1]{%[4
-	\begingroup%
-	\nolinenumbers%
-	\minisec{#1}%
-	\endgroup%
-}
+\let\oldminisec\minisec%[4
+\renewcommand{\minisec}[1]{\oldminisec{\nolinenumbers #1}}
 
-\newcommand{\subsectionnonum}[2][\null]{%[4
-	\begingroup%
-	\nolinenumbers%
-	\subsection[#1]{#2}%
-	\endgroup%
-}
+\let\oldsubsection\subsection%[4
+\renewcommand{\subsection}[2][\null]{\oldsubsection[#1]{\nolinenumbers #2}}
 
-\newcommand{\subsubsectionnonum}[2][\null]{%[4
-	\begingroup%
-	\nolinenumbers%
-	\subsubsection[#1]{#2}%
-	\endgroup%
-}
+\let\oldsubsubsection\subsubsection%[4
+\renewcommand{\subsubsection}[2][\null]{\oldsubsubsection[#1]{\nolinenumbers #2}}
 
 %[2 Ajout des colonnes
 \newenvironment{colonnes}{%
