@@ -13,7 +13,16 @@ Il y a un soucis avec la gestion des espaces verticaux avant les titres après l
 redéfinition de la titraille. Je dois trouver un autre moyen de supprimer la
 numérotation des lignes.
 
+
+Résolution
+----------
+Je pense que c'est le \[begin/end]group qui posait problème.
+La résolution passe par le fait d'ajouter la commande \nolinenumbers  dans le
+paramètre des commandes de sectionnement.
+
+
 État
 ====
+Résolut
 Bogue à l'affichage.
 
