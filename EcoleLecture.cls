@@ -186,43 +186,38 @@
 }
 
 %[3 Titraille
-\let\oldpart\part%[4
-\renewcommand{\part}[2][\null]{%
+\newcommand{\partnonum}[2][\null]{%[4
 	\begingroup%
 	\nolinenumbers%
-	\oldpart[#1]{#2}%
+	\part[#1]{#2}%
 	\endgroup%
 }
 
-\let\oldsection\section%[4
-\renewcommand{\section}[2][\null]{%
+\newcommand{\sectionnonum}[2][\null]{%[4
 	\begingroup%
 	\nolinenumbers%
-	\oldsection[#1]{#2}%
+	\section[#1]{#2}%
 	\endgroup%
 }
 
-\let\oldminisec\minisec%[4
-\renewcommand{\minisec}[1]{%
+\newcommand{\minisecnonum}[1]{%[4
 	\begingroup%
 	\nolinenumbers%
-	\oldminisec{#1}%
+	\minisec{#1}%
 	\endgroup%
 }
 
-\let\oldsubsection\subsection%[4
-\renewcommand{\subsection}[2][\null]{%
+\newcommand{\subsectionnonum}[2][\null]{%[4
 	\begingroup%
 	\nolinenumbers%
-	\oldsubsection[#1]{#2}%
+	\subsection[#1]{#2}%
 	\endgroup%
 }
 
-\let\oldsubsubsection\subsubsection%[4
-\renewcommand{\subsubsection}[2][\null]{%
+\newcommand{\subsubsectionnonum}[2][\null]{%[4
 	\begingroup%
 	\nolinenumbers%
-	\oldsubsubsection[#1]{#2}%
+	\subsubsection[#1]{#2}%
 	\endgroup%
 }
 
