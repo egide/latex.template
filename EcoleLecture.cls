@@ -194,10 +194,8 @@
 }
 
 \newcommand{\sectionnonum}[2][\null]{%[4
-	\begingroup%
-	\nolinenumbers%
-	\section[#1]{#2}%
-	\endgroup%
+	%
+	\section[#1]{\nolinenumbers #2}%
 }
 
 \newcommand{\minisecnonum}[1]{%[4
