@@ -3,15 +3,14 @@ Version
 
 Branche
 -------
-fin feature/EcoleLecture
-
-
-Objectif
---------
-Finaliser le modèle
+stable / V_01.00
 
 
 État
 ====
 Fonctionnel
+- EcoleLecture.cls / EcoleLecture.tex
+  sont utilisables et stables
+- AfficheCourriel.cls / AfficheCourriel.tex
+  sont juste un vague projet ayant atterri ici par erreur...
 
