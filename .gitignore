@@ -1,5 +1,5 @@
 ## Dossier de compilation
-out/
+out
 *.pdf
 
 ## fichiers temporaires

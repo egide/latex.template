@@ -3,15 +3,14 @@ Version
 
 Branche
 -------
-Stable
+stable / V_01.00
 
 
-Objectif
---------
-Ce qui se trouve dans cette branche est censé être utilisable sans problème.
-
-
-Ajout
------
-Cette version ajoute une classe pour l'impression de courrier électronique.
+État
+====
+Fonctionnel
+- EcoleLecture.cls / EcoleLecture.tex
+  sont utilisables et stables
+- AfficheCourriel.cls / AfficheCourriel.tex
+  sont juste un vague projet ayant atterri ici par erreur...
 

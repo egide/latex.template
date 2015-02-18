@@ -1,5 +1,5 @@
-%[[1 Définitions de base
-% vim: set nospell fdm=marker foldmarker=[[,]] filetype=tex :
+%[1 Définitions de base
+% vim: set nospell fdm=marker foldmarker=%[,%] filetype=tex :
 % Classe pour l'impression de courriel pour l'affichage
 % sur tableau d'affichage public
 
@@ -9,7 +9,7 @@
 \RequirePackage[utf8]{inputenc}%     Encodage des documents en entrée
 \RequirePackage[T1]{fontenc}%        Encodage des caractères en sortie
 
-%[[1 Extentions
+%[1 Extentions
 \RequirePackage{xspace}%             Gestion des espaces suivants les macros
 \RequirePackage{lmodern}%            Police postscript pour une sortie correcte en pdf
 \RequirePackage{keyval}%             Gestion des options en clé=valeur
@@ -27,7 +27,7 @@
 	{geometry}
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
-%[[1 Constantes
+%[1 Constantes
 % Définition de la date
 % si aucune date n'est donnée, c'est le jour de compilation qui compte.
 \newcommand\ldate{\today}
@@ -37,9 +37,9 @@
 \newcommand\lfrom{inconnu@domain.tld}
 \newcommand\deflfrom[1]{\renewcommand\lfrom{#1}}
 
-%[[1 Options
-%[[2 Mise en page
-\DeclareOption{margepetite}{%[[3
+%[1 Options
+%[2 Mise en page
+\DeclareOption{margepetite}{%[3
 	\geometry{%
 		top=1cm,%
 		bottom=2cm,%
@@ -48,7 +48,7 @@
 	}
 }
 
-\DeclareOption{margegrande}{%[[3
+\DeclareOption{margegrande}{%[3
 	\geometry{%
 		top=3cm,%
 		bottom=3cm,%
@@ -60,7 +60,7 @@
 
 \ProcessOptions
 
-%[[1 Entêtes et pieds de pages
+%[1 Entêtes et pieds de pages
 % vide le contenu des entêtes et pieds de pages
 \clearscrheadfoot
 
@@ -82,8 +82,8 @@
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[]{\ldate}
 
-%[[1 Commandes personnelles
-%[[2 Liste en tête de document
+%[1 Commandes personnelles
+%[2 Liste en tête de document
 \newcommand{\entrylabel}[1]{\hfill\sffamily\scriptsize\bfseries #1 :}
 \newenvironment{mylist}%
 	{%
@@ -104,7 +104,7 @@
 		\noindent\raisebox{1.7ex}{\rule{\textwidth}{.13ex}}%
 	}
 
-%[[2 Signature
+%[2 Signature
 % Commande pour placer la signature de l'expéditeur
 \newcommand\signature[1]{%
 	\nopagebreak[5]%
@@ -113,7 +113,7 @@
 	\hfill\hfill\parbox{.49\linewidth}{\centering\slshape #1}\hfill%
 }
 
-%[[2 Boite d'explication
+%[2 Boite d'explication
 \newcommand\commentaire[2]{%
 	\vfill%
 	\centering%
