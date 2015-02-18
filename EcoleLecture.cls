@@ -1,10 +1,9 @@
 %[1 Définitions de base
 % vim: set nospell fdm=marker foldmarker=%[,%] filetype=tex :
 % Classe pour l'impression de textes de lecture suivie en classe
-% sur tableau d'affichage public
 
 \NeedsTeXFormat{LaTeX2e}%            Déclaration du format LaTeX cible Nom et version de la classe fournie
-\ProvidesClass{EcoleLecture}[2014/12/23 Classe personnelle, V0.0]
+\ProvidesClass{EcoleLecture}[2014/12/23 Classe personnelle, V1.0]
 \LoadClassWithOptions{scrartcl}%     Chargement de la classe article de komascript en lui passant les options
 \KOMAoptions{%
 	twoside,
