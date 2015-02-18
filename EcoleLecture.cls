@@ -38,7 +38,7 @@
 	footskip=1cm,%
 	pdftex,%
 ]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage{hyperref}%           Gestion des liens hypertex et du PDF
 \RequirePackage[frenchb]{babel}%     Le document est en français
 
 %[1 Constantes
@@ -217,8 +217,6 @@
 	\nolinenumbers%
 }
 
-% Fin de document
-
 %[1 Options
 %[2 Mise en page
 \DeclareOption{oneside}{%[3
@@ -244,4 +242,6 @@
 }
 
 \ProcessOptions\relax
+
+% Fin de document
 
