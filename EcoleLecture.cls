@@ -26,7 +26,7 @@
 ]{scrlayer-scrpage}%
 \RequirePackage{multicol}%           Pour mettre le texte en colonnes
 \RequirePackage[np]{numprint}%       Mise en forme des chiffres
-\usepackage{lineno}%                 Numérotation des lignes
+\RequirePackage{lineno}%             Numérotation des lignes
 \RequirePackage[%                    Gestion des marges
 	includehead,%
 	includefoot,%
@@ -131,8 +131,8 @@
 \ifoot[\@createurhead]{\@createurhead}
 \cfoot[\thepage\,/\,\pageref{LastPage}]{\thepage\,/\,\pageref{LastPage}}
 \ofoot[\@mdate]{\@mdate}
-\ihead[]{\@titrehead}
-\chead[]{\@sujethead}
+\ihead[]{\@sujethead}
+\chead[]{\@titrehead}
 \ohead[]{\@auteurhead}
 
 %[1 Mise en page
