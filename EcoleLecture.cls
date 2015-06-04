@@ -216,6 +216,14 @@
 	\nolinenumbers%
 }
 
+\newenvironment{colonnesnonum}{%
+	\setlength{\columnsep}{14pt}%
+%	\setlength{\columnseprule}{.1pt}%
+	\begin{multicols}{2}%
+}{%
+	\end{multicols}%
+}
+
 %[1 Options
 %[2 Mise en page
 \DeclareOption{oneside}{%[3
